@@ -1,0 +1,68 @@
+
+PS E:\GITHUB\k\git version\version-control-project> git clone https://github.com/surajroy7430/version-control-project
+Cloning into 'version-control-project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+PS E:\GITHUB\k\git version\version-control-project>
+
+PS E:\GITHUB\k\git version\version-control-project> git clone https://github.com/surajroy7430/version-control-project
+Cloning into 'version-control-project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+PS E:\GITHUB\k\git version\version-control-project> cd version-control-project
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git add .
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git status
+On branch main
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git commit -m "added index.js and write documentation in md file"
+[main 1ffdd80] added index.js and write documentation in md file
+ 2 files changed, 61 insertions(+), 1 deletion(-)
+ create mode 100644 index.js
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 817 bytes | 272.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/surajroy7430/version-control-project
+   1f54051..1ffdd80  main -> main
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> git log
+commit 1ffdd80b06a5509192502252209307e45d0508d4 (HEAD -> main, origin/main, origin/HEAD)
+Author: Suraj Roy <surajroy7430@gmail.com>
+Date:   Thu Nov 21 16:38:19 2024 +0530
+
+    added index.js and write documentation in md file
+
+commit 1f54051c54c47c96e5f30e968f658ba873920009
+Author: SURAJ ROY <121452826+surajroy7430@users.noreply.github.com>
+Date:   Thu Nov 21 16:05:50 2024 +0530
+
+    Initial commit
+PS E:\GITHUB\k\git version\version-control-project\version-control-project> 

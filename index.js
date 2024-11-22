@@ -1,49 +1,39 @@
-let findEvenNum = (num) => {
-    if(num %2 === 0) {
-        console.log(num,"is an even number.")
+const $ = (selector) => document.getElementById(selector);
+
+const input = $("number")
+const btn = $("btn")
+const result = $("result")
+
+let findEvenNum = (n) => {
+    return (n %2 === 0) ? `${n} is an even number.` : `${n} is an odd number.`
+}
+
+const printXBoxPattern = (n) => {
+    let output = ""
+    for(let i=1; i<=n; i++) {
+        let bag = "";
+        for(let j=1; j<=n;j++) {
+            if(i==1 || j==1 || i==n || j==n || i==j || i+j == n+1) {
+                bag += "*&nbsp;"
+            }
+            else {
+                bag += "&nbsp;&nbsp;&nbsp;"
+            }
+        }
+        output += bag + "<br>"
+    }
+    return output
+}
+
+
+btn.addEventListener("click", () => {
+    const num = parseInt(input.value);
+    if (isNaN(num) || num < 1) {
+        alert("Please Enter a Valid Number");
+        input.value = ""
+        result.innerHTML = ""
     } else {
-        console.log(num,"is an odd number.")
+        input.value = ""
+        result.innerHTML = findEvenNum(num) + "<br>" + "<br>" + printXBoxPattern(num);
     }
-}
-findEvenNum(6)
-findEvenNum(5)
-
-console.log(" ")
-
-let patternPrint = (n) => {
-    for(let i=1; i<=n; i++) {
-        let bag = "";
-        for(let j=n; j>=i; j--) {
-            bag += "*" + " "
-        }
-        console.log(bag);
-        
-    }
-}
-patternPrint(5)
-
-console.log(" ")
-
-let patternBoxPrint = (n) => {
-    for(let i=1; i<=n; i++) {
-        let bag = "";
-        if(i === 1 || i === n) {
-            for(let j=1; j<=n; j++) {
-                bag += "*"
-                
-                if(j < i || i < n) {
-                    bag += " "
-                }
-            }
-        }
-        else {
-            bag += "* "
-            for(let j=1; j<=n-2; j++) {
-                bag += "  "
-            }
-            bag += "*"
-        }
-        console.log(bag);
-    }
-}
-patternBoxPrint(6)
+});

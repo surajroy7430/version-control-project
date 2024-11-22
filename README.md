@@ -1,8 +1,9 @@
 # version-control-project
 
 A basic project to demonstrate JavaScript functionality for:
-- Finding even and odd numbers in an array.
-- Printing patterns.
+- enter value in input start from 1 
+- Find even and odd numbers by click on [click] button.
+- Printing patterns by click on same [click] button.
 
 ## How to Use
 - Clone the repository: 
